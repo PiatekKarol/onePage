@@ -1,19 +1,27 @@
-// document.addEventListener('DOMContentLoaded', function(){
-// const nav = document.querySelector('.nav')
-// const navMobile = document.querySelector(".nav-mobile")
-// const hamburgerBtn = document.querySelector(".hamburger-btn")
-// const allNavItems = document.querySelectorAll('.nav-mobile__item')
-// const navBtnBars = document.querySelector('.burger-btn__bars')
-// // SHOW MENU
-// const handleNav = () => {
-//     navMobile.classList.toggle('show')
+document.addEventListener('DOMContentLoaded', function(){
+const nav = document.querySelector('.navi__items')
+const hamburgerBtn = document.querySelector(".hamburger")
+const allNaviItems = document.querySelectorAll('.navi__item')
+const navBtnBars = document.querySelector('.burger-btn__bars')
 
-//     allNavItems.forEach(item => {
-//         item.addEventListener('click', () => {
-//             navMobile.classList.remove('show')
-//         })
-//     })
+// function handleNavi(){
+//     nav.classList.toggle('showNavi')
+//     hamburgerBtn.classList.toggle('showNavi')
 // }
+
+// // SHOW MENU
+const handleNavi = () => {
+    nav.classList.toggle('showNavi')
+    // hamburgerBtn.classList.toggle('ahover')
+    allNaviItems.forEach(item => {
+        item.addEventListener('click', () => {
+            nav.classList.remove('showNavi')
+        })
+    })
+    
+}
+hamburgerBtn.addEventListener('click', handleNavi)
+
 // // SHADOW NAVI
 // function addShadow(){
 //     if (window.scrollY >= 20){
@@ -25,4 +33,4 @@
 // window.addEventListener('scroll',addShadow)
 // hamburgerBtn.addEventListener('click', handleNav);
 
-// })
+})

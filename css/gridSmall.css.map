@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,MAAM,EAAC,SAAS,EAAE,KAAK;EAGnB,AAAA,KAAK,CAAA;IACD,OAAO,EAAE,IAAI;GAChB",
     "sources": [
         "../sass/gridSmall.scss"
     ],

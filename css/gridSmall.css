@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=gridSmall.css.map */
+@media (min-width: 576px) {
+  .navi {
+    display: none;
+  }
+}
+/*# sourceMappingURL=gridSmall.css.map */
