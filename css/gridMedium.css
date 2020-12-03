@@ -1,1 +1,58 @@
-/* No CSS *//*# sourceMappingURL=gridMedium.css.map */
+@media (min-width: 768px) {
+  .hero .hero-img__subtitle {
+    font-size: 2.2rem;
+  }
+  .hero .hero-img__title {
+    margin-top: 6%;
+    font-size: 8rem;
+  }
+  .hero .hero-img__description {
+    font-size: 1.8rem;
+    padding-right: 50px;
+  }
+  .hero .hero-img__btn {
+    font-size: 1.8rem;
+  }
+  .careers-box__description {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 60px;
+  }
+  .careers-box-question__description {
+    text-align: left;
+    font-size: 1.4rem;
+    padding-bottom: 60px;
+  }
+  .news-box__description {
+    text-align: left;
+    font-size: 1.4rem;
+    padding-bottom: 60px;
+  }
+  .container-slider {
+    height: 550px;
+  }
+  .container-slider__slide {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 550px;
+    width: 100%;
+  }
+  .container-slider__area {
+    position: relative;
+    height: 550px;
+  }
+  .container-slider__column {
+    width: 13%;
+  }
+  .container-slider__column .demo {
+    opacity: 0.6;
+    height: 90px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-slider__column .active,
+  .container-slider__column .demo:hover {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=gridMedium.css.map */

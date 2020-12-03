@@ -1,1 +1,104 @@
-/* No CSS *//*# sourceMappingURL=gridLarge.css.map */
+@media (min-width: 992px) {
+  .navi__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  .navi__item {
+    padding: 25px;
+  }
+  .hero .hero-img {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/lighthouseDesktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    z-index: 0;
+  }
+  .footer {
+    background-color: black;
+  }
+  .footer .footer-box {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .footer .footer-box__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer .footer-box__logo {
+    color: white;
+    font-size: 3.2rem;
+    cursor: pointer;
+    left: 0;
+    padding-bottom: 0;
+  }
+  .footer .footer-box__logo :hover {
+    color: rgba(88, 159, 226, 0.8);
+  }
+  .footer .footer-box__items {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer .footer-box__items :hover {
+    color: rgba(88, 159, 226, 0.8);
+  }
+  .footer .footer-box__item {
+    position: relative;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .footer .footer-box__copyright {
+    text-transform: capitalize;
+    position: relative;
+    right: 0;
+    padding: 0 0 0 25px;
+  }
+  .footer .footer-box__copyright span {
+    text-transform: uppercase;
+  }
+}
+/*# sourceMappingURL=gridLarge.css.map */

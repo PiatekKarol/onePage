@@ -1,8 +1,85 @@
 @media(min-width: 576px) {
-   
 
-    .navi{
-        display: none;
+    .hero {
+        .hero-img {
+            &__subtitle {
+                font-size: 2rem;
+            }
+
+            &__title {
+                margin-top: 6%;
+                font-size: 7.8rem;
+            }
+
+            &__description {
+                font-size: 1.4rem;
+                padding-right: 50px;
+            }
+
+            &__btn {
+                font-size: 1.6rem;
+            }
+        }
     }
 
+    .careers-box {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &__text {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            color: rgb(23, 43, 131);
+            text-transform: uppercase;
+            font-size: 3rem;
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+
+        &__subtitle {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: lighter;
+            padding-bottom: 20px;
+        }
+
+        &__description {
+            margin-bottom: 60px;
+        }
+    }
+
+    .container-slider {
+        height: 400px;
+
+        &__slide {
+            object-fit: cover;
+            height: 400px;
+            width: 100%;
+        }
+
+        &__area {
+            position: relative;
+            height: 400px;
+        }
+
+        &__column {
+            width: 13%;
+
+            .demo {
+                opacity: 0.6;
+                height: 70px;
+                object-fit: cover;
+            }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+        }
+    }
 }

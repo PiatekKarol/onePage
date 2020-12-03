@@ -1,4 +1,3 @@
-@import './colors';
 @import './animation.scss';
 
 *,
@@ -23,6 +22,10 @@ body {
     background-color: rgba(0, 0, 0, .8)
 }
 
+.left {
+    text-align: left;
+}
+
 .header-wrapper {
     position: fixed;
     z-index: 1;
@@ -33,14 +36,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 60px;
     transition: .3s;
 
 
 
     .header-logo {
         position: fixed;
-        top: 20px;
+        top: 10px;
         left: 20px;
         display: flex;
         align-items: center;
@@ -56,7 +59,6 @@ body {
             font-size: 2rem;
             padding-left: 15px;
         }
-
     }
 
     .navi {
@@ -72,7 +74,7 @@ body {
             z-index: 11;
             transform: translateX(-101%);
             list-style-type: none;
-            background-color: rgb(54, 42, 122);
+            background-color: rgb(48, 84, 139);
             transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
         }
 
@@ -89,15 +91,12 @@ body {
         .showNavi {
             transform: translateX(0);
         }
-
-
     }
 
     .hamburger {
         position: fixed;
-        top: 20px;
+        top: 14px;
         right: 20px;
-        // padding: 1em;
         background: none;
         border: 1px solid transparent;
         cursor: pointer;
@@ -105,7 +104,6 @@ body {
 
         &:focus {
             outline: none;
-            // border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 8px;
         }
 
@@ -156,19 +154,18 @@ body {
     .hero-img {
         position: relative;
         height: 100vh;
-        background-image: url('../img/beachSmall.jpg');
+        background-image: url(../img/lighthouseMobile.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position-x: 63%;
         z-index: 0;
 
-
-        &__shadow {
+        &::before {
+            content: '';
             position: absolute;
             background-color: rgba($color: #000000, $alpha: .5);
             height: 100%;
             width: 100%;
-            // z-index: -10;
         }
 
         &__text {
@@ -215,24 +212,28 @@ body {
 
         &__btn .fas {
             padding-left: 15px;
+        }
 
+        &__wrapper-arrow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            place-content: center center;
+            cursor: pointer;
         }
 
         &__arrow {
             position: absolute;
             display: flex;
-            align-items: center;
             flex-direction: column;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 5%;
-            cursor: pointer;
+            bottom: 1%;
             text-transform: uppercase;
-            background-color: transparent;
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
-
+            align-items: center;
+            z-index: 10;
         }
 
         &__arrow .fas {
@@ -249,8 +250,231 @@ body {
     }
 }
 
+.careers-box {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__text {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: rgb(23, 43, 131);
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: lighter;
+        padding-bottom: 20px;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 1.2rem;
+        padding-bottom: 60px;
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
-@import './gridSmall';
+.container-slider {
+    height: 250px;
+
+    &__slide {
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    &__area {
+        position: relative;
+        height: 250px;
+    }
+
+    &__boxArrow {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__prev,
+    &__next {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        user-select: none;
+        background-color: rgba($color: rgb(28, 67, 104), $alpha: .8);
+        width: 40px;
+        height: 40px;
+    }
+
+    &__prev {
+        border-radius: 0 5px 5px 0;
+    }
+
+    &__next {
+        border-radius: 5px 0 0 5px;
+    }
+
+    &__caption-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        height: 20%;
+    }
+
+    &__column {
+        width: 13%;
+
+        .demo {
+            opacity: 0.6;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.news-box {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__text {
+        color: black;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: rgb(23, 43, 131);
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding-bottom: 20px;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: lighter;
+        padding-bottom: 20px;
+        margin-top: 60px;
+    }
+
+    &__description {
+        text-align: left;
+        font-size: 1.2rem;
+        padding-bottom: 60px;
+    }
+
+    &__background {
+        background-color: black
+    }
+}
+
+.careers-box-question {
+
+    &__text {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__title {
+        color: rgb(23, 43, 131);
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    &__description {
+        text-align: left;
+        font-size: 1.2rem;
+        padding-bottom: 60px;
+    }
+}
+
+.footer {
+    background-color: black;
+
+    .footer-box {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__logo {
+            color: white;
+            font-size: 2.8rem;
+            cursor: pointer;
+            padding-bottom: 13px;
+        }
+
+        &__items {
+            list-style-type: none;
+        }
+
+        &__item {
+            position: relative;
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            padding: 8px;
+            text-align: center;
+        }
+
+        &__copyright {
+            text-transform: capitalize;
+            padding-top: 12px;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+
+@import './gridSmall.scss';
 @import './gridMedium.scss';
 @import './gridLarge.scss';
